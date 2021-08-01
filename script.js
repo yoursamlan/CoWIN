@@ -8,7 +8,7 @@ async function vac(url) {
 	//console.log(response);
 	const data = await response.json();
 
-	t = 10000 / data.sessions.length;
+	t = 20000 / data.sessions.length;
 
 	for (var i = 0; i < data.sessions.length; i++) {
 
@@ -70,5 +70,5 @@ function d1() {
 
 
 function main() {
-	setInterval('d1();', 10000);
+	setInterval('d1();', 20000);
 }
