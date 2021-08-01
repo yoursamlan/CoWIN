@@ -1,0 +1,47 @@
+body {
+	font-family: monospace;
+}
+
+output{
+	margin-left: 20px;;
+	color: #222;
+}
+#d1,
+#d2,
+#center{
+	color: red;
+}
+
+.view {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20%;
+	padding: 2em;
+	width: 60%;
+	min-width: 500px;
+	font-family: Montserrat, monospace;
+	text-align: justify;
+	font-size: 80%;
+	color: #777;
+	border-radius: 50px;
+	background: #ffffff;
+	box-shadow: 20px 20px 60px #d9d9d9,
+		-20px -20px 60px #ffffff;
+}
+
+.lu {
+	background: #7690ff;
+	color: white;
+	text-align: center;
+	padding: 0.5em;;
+	border-radius: 0px;
+	width: 106%;
+	margin-left: -5%;
+}
+
+#tnow, #pincode{
+	color: #fff;
+	font-family: monospace;
+	font-size: 120%;
+}
