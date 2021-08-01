@@ -16,7 +16,7 @@ output{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20%;
+	margin-top: 10%;
 	padding: 2em;
 	width: 60%;
 	min-width: 500px;
@@ -36,8 +36,8 @@ output{
 	text-align: center;
 	padding: 0.5em;;
 	border-radius: 0px;
-	width: 106%;
-	margin-left: -5%;
+	width: 100%;
+	margin-left: 0;
 }
 
 #tnow, #pincode{
