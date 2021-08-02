@@ -46,9 +46,9 @@ output{
 }
 .pinchange {
 	display: inline-flex;
-	margin-left: 25%;
+	margin-left: 10%;
 	margin-right: auto;
-	width: 50%;
+	width: 80%;
 	text-align: center;
 }
 
