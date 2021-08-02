@@ -26,7 +26,7 @@ async function vac(url) {
 		//if (d1>0 || d2>0){ //705586
 
 
-
+		document.getElementById("msg").innerHTML = "";
 		document.getElementById("center").innerHTML = name;
 		document.getElementById("vaccine").innerHTML = vaccine;
 		document.getElementById("mial").innerHTML = mial;
@@ -91,10 +91,16 @@ function changePIN(){
 	else{
 		localStorage.setItem("pincode", pin);
 		document.getElementById("PIN").value = "";
-		location.reload();
+		msg = "Please wait a moment. Loading results for the PIN: "+pin+" ...";
+		alert(msg);
+		//document.getElementById("msg").innerHTML = msg;
+		//await sleep(5000);
+		window.reload();
+		
 	}
 }
 
 function main() {
+	document.getElementById("msg").innerHTML = "Loading... Please Wait...";
 	setInterval('d1();', 10000);
 }
