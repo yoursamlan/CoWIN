@@ -27,6 +27,7 @@ async function vac(url) {
 
 
 		document.getElementById("msg").innerHTML = "";
+		document.getElementById("pincode").innerHTML = pincode;
 		document.getElementById("center").innerHTML = name;
 		document.getElementById("vaccine").innerHTML = vaccine;
 		document.getElementById("mial").innerHTML = mial;
@@ -59,7 +60,7 @@ function getLS(cname) {
 function d1() {
 
 	pincode = getLS("pincode");
-	document.getElementById("pincode").innerHTML = pincode;
+	
 
 	var MyDate = new Date();
 	var nextDate = new Date();
