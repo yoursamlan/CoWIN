@@ -91,7 +91,7 @@ function changePIN(){
 	else{
 		localStorage.setItem("pincode", pin);
 		document.getElementById("PIN").value = "";
-		window.reload();
+		location.reload();
 	}
 }
 
