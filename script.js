@@ -8,7 +8,7 @@ async function vac(url) {
 	//console.log(response);
 	const data = await response.json();
 
-	t = 20000 / data.sessions.length;
+	t = 10000 / data.sessions.length;
 
 	for (var i = 0; i < data.sessions.length; i++) {
 
@@ -22,7 +22,6 @@ async function vac(url) {
 		var mial = x.min_age_limit;
 		var vaccine = x.vaccine;
 
-		document.getElementById("pincode").innerHTML = pincode;
 		//console.log(data.sessions[i]);
 		//if (d1>0 || d2>0){ //705586
 
@@ -42,10 +41,25 @@ async function vac(url) {
 	}
 }
 
+function getLS(cname) {
+	var val = localStorage.getItem(cname);
+	if (val !== null && val !== '') {
+		return val;
+	} else {
+			if (cname == "pincode") {
+				localStorage.setItem("pincode", "732101");
+				return "732101";
+			} 
+			else {
+				console.log("localStorage is not present.")
+		}
+	}
+}
+
 function d1() {
 
-	pincode = 732101;
-
+	pincode = getLS("pincode");
+	document.getElementById("pincode").innerHTML = pincode;
 
 	var MyDate = new Date();
 	var nextDate = new Date();
@@ -56,7 +70,7 @@ function d1() {
 	var time = ('0' + MyDate.getHours()).slice(-2) + ":" + ('0' + MyDate.getMinutes()).slice(-2) + ":" + ('0' + MyDate.getSeconds()).slice(-2);
 	var dateTime = MyDateString + ' ' + time;
 
-	if (MyDate.getHours() <= 12) {
+	if (MyDate.getHours() <= 16) {
 		urldate = MyDateString;
 	} else {
 		urldate = nextDateString;
@@ -68,7 +82,19 @@ function d1() {
 	vac(url);
 }
 
+function changePIN(){
+	var pin = document.getElementById("PIN").value;
+	if (pin.length != 6){
+	alert("Pincode is Invalid. Please enter correct PIN.");
+		document.getElementById("PIN").value = "";
+		}
+	else{
+		localStorage.setItem("pincode", pin);
+		document.getElementById("PIN").value = "";
+		window.reload();
+	}
+}
 
 function main() {
-	setInterval('d1();', 20000);
+	setInterval('d1();', 10000);
 }

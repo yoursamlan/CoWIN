@@ -16,10 +16,10 @@ output{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10%;
+	margin-top: 10vh;
 	padding: 2em;
 	width: 60%;
-	min-width: 500px;
+	min-width: 600px;
 	font-family: Montserrat, monospace;
 	text-align: justify;
 	font-size: 80%;
@@ -34,14 +34,52 @@ output{
 	background: #7690ff;
 	color: white;
 	text-align: center;
-	padding: 0.5em;;
+	padding: 0.5em 0em;
 	border-radius: 0px;
 	width: 100%;
-	margin-left: 0;
 }
 
 #tnow, #pincode{
 	color: #fff;
 	font-family: monospace;
 	font-size: 120%;
+}
+.pinchange {
+	display: inline-flex;
+	margin-left: 25%;
+	margin-right: auto;
+	width: 50%;
+	text-align: center;
+}
+
+#PIN {
+	height: 40px;
+	padding: 10px;
+	font-size: 20px;
+	width: 55%;
+	text-align: center;
+	border-radius: 15px;
+	border: 1px #999;
+background: #ffffff;
+box-shadow: inset 14px 14px 29px #f0f0f0,
+            inset -14px -14px 29px #ffffff;
+}
+
+#PINchanger {
+	height: 40px;
+	border: 0px;
+	width: 40%;
+	padding: 5px;
+	font-size: 20px;
+border-radius: 15px;
+background: #8d98f0;
+	color: #fff;
+	margin-left: 5%;
+box-shadow:  8px 8px 16px #f0f0f0,
+             -8px -8px 16px #ffffff;
+	
+}
+
+#PINchanger:hover{
+	background-color: #454e91;
 }
